@@ -41,7 +41,7 @@ RUN git clean -xdf \
  && git submodule update --recursive \
  && cmake -S . -B build \
       -DGGML_HIP=ON \
-      -DAMDGPU_TARGETS=gfx1201 \
+      -DAMDGPU_TARGETS=gfx1100 \
       -DCMAKE_BUILD_TYPE=Release \
       -DGGML_RPC=ON \
       -DLLAMA_HIP_UMA=ON \
