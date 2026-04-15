@@ -11,7 +11,7 @@ on:
         default: all
 
 env:
-  DOCKERHUB_REPO: docker.io/kyuz0/amd-r9700-toolboxes
+  DOCKERHUB_REPO: docker.io/loxye/com.lox.ye
   LOCAL_PREFIX: llama
 
 jobs:
