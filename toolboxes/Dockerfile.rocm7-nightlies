@@ -9,7 +9,7 @@ RUN dnf -y --nodocs --setopt=install_weak_deps=False install \
 # find & fetch the latest Linux 7.x.x tarball (gfx1151)
 WORKDIR /tmp
 ARG ROCM_MAJOR_VER=7
-ARG GFX=gfx120X-all
+ARG GFX=gfx110X-all
 RUN set -euo pipefail; \
   BASE="https://therock-nightly-tarball.s3.amazonaws.com"; \
   PREFIX="therock-dist-linux-${GFX}-${ROCM_MAJOR_VER}"; \
@@ -60,7 +60,7 @@ RUN git clone --recursive https://github.com/ggerganov/llama.cpp.git . \
 
 RUN cmake -S . -B build \
   -DGGML_HIP=ON \
-  -DAMDGPU_TARGETS=gfx1201 \
+  -DAMDGPU_TARGETS=gfx1100 \
   -DCMAKE_BUILD_TYPE=Release \
   -DGGML_RPC=ON \
   -DLLAMA_HIP_UMA=ON \
