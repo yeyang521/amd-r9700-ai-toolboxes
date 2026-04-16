@@ -42,6 +42,7 @@ RUN git clean -xdf \
   && cmake -S . -B build \
   -DGGML_HIP=ON \
   -DGGML_HIP_FA=ON \
+  -DGGML_CUDA_FA_ALL_QUANTS=ON \
   -DAMDGPU_TARGETS=gfx1100 \
   -DCMAKE_BUILD_TYPE=Release \
   -DGGML_RPC=ON \
