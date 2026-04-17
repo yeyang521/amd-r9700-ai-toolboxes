@@ -68,7 +68,7 @@ FROM registry.fedoraproject.org/fedora-minimal:43
 # rocm 7.2 repo
 RUN <<'EOF'
 tee /etc/yum.repos.d/rocm.repo <<REPO
-[]
+[ROCm-7.2]
 name=ROCm7.2
 baseurl=https://repo.radeon.com/rocm/el9/7.2/main
 enabled=1
